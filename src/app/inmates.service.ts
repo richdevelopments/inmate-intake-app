@@ -8,11 +8,12 @@ export class InmatesService {
   uri = 'http://localhost:4000/inmates';
 
   constructor(private http: HttpClient) { }
-  addInmate(InmateName, InmateDateOfBirth, InmateCellNumber) {  
+  addInmate(InmateName, InmateDateOfBirth, InmateCellNumber, InmateLocation) {  
     const obj = {  
       InmateName,  
       InmateDateOfBirth,  
-      InmateCellNumber 
+      InmateCellNumber,
+      InmateLocation 
     };  
     console.log(obj);  
     this.http.post(`${this.uri}/add`, obj)  

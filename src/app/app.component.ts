@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SlimLoadingBarService } from 'ng2-slim-loading-bar';
 import { NavigationCancel,  
   Event,  
          NavigationEnd,  
@@ -17,24 +16,8 @@ import { NavigationCancel,
 export class AppComponent {
   title = 'inmate-intake-app';
 
-  constructor(private loadingBar: SlimLoadingBarService, private router: Router) {  
-    this.router.events.subscribe((event: Event) => {  
-      this.navigationInterceptor(event);  
+  constructor( private router: Router) {  
+    this.router.events.subscribe((event: Event) => {   
     });  
   }  
-  
-  private navigationInterceptor(event: Event): void {  
-    if (event instanceof NavigationStart) {  
-      this.loadingBar.start();  
-    }  
-    if (event instanceof NavigationEnd) {  
-      this.loadingBar.complete();  
-    }  
-    if (event instanceof NavigationCancel) {  
-      this.loadingBar.stop();  
-    }  
-    if (event instanceof NavigationError) {  
-      this.loadingBar.stop();  
-    }  
-  } 
 }
