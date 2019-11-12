@@ -17,7 +17,7 @@ export class InmateAddComponent implements OnInit {
    createForm() {  
     this.angForm = this.fb.group({  
       InmateName: ['', Validators.required ],  
-      ImateDateOfBirth: ['', Validators.required ],  
+      InmateDateOfBirth: ['', Validators.required ],  
       InmateCellNumber: ['', Validators.required ],  
       InmateLocation: ['', Validators.required ]  
     });  
