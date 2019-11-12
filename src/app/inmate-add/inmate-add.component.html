@@ -1,0 +1,46 @@
+<div class="card">  
+    <div class="card-body">  
+      <form [formGroup]="angForm" novalidate>  
+        <div class="form-group">  
+          <label class="col-md-4">Inmate Name</label>  
+          <input type="text" class="form-control"   
+            formControlName="InmateName"   
+            #InmateName />  
+        </div>  
+        <div *ngIf="angForm.controls['InmateName'].invalid && (angForm.controls['InmateName'].dirty || angForm.controls['InmateName'].touched)" class="alert alert-danger">  
+          <div *ngIf="angForm.controls['InmateName'].errors.required">  
+            Inmate Name is required.  
+          </div>  
+        </div>  
+        <div class="form-group">  
+          <label class="col-md-4">Inmate Date Of Birth </label>  
+          <input type="text "class="form-control" 
+          formControlName="InmateDateOfBirth"   
+          #InmateDateOfBirth />  
+        </div>  
+        <div *ngIf="angForm.controls['InmateDateOfBirth'].invalid && (angForm.controls['InmateDateOfBirth'].dirty || angForm.controls['InmateDateOfBirth'].touched)" class="alert alert-danger">  
+          <div *ngIf="angForm.controls['InmateDateOfBirth'].errors.required">  
+            Inmate Date Of Birth is required.  
+          </div>  
+        </div>  
+        <div class="form-group">  
+          <label class="col-md-4">Inmate Cell No.</label>  
+          <input type="text" class="form-control"   
+            formControlName="InmateCellNumber"   
+            #InmateCellNumber 
+          />  
+        </div>  
+        <div *ngIf="angForm.controls['InmatePrice'].invalid && (angForm.controls['InmateCellNumber].dirty || angForm.controls['InmateCellNumber'].touched)" class="alert alert-danger">  
+          <div *ngIf="angForm.controls['InmateCellNumber'].errors.required">  
+            Inmate Cell Number is required.  
+          </div>  
+        </div>  
+        <div class="form-group">  
+            <button (click) = "addInmate(InmateName.value, InmateDateOfBirth.value, InmateCellNumber.value)" type="submit" class="btn btn-primary"  
+            [disabled]="angForm.pristine || angForm.invalid" >  
+              Create Inmate  
+            </button>  
+        </div>
+      </form>  
+    </div>  
+  </div>  
