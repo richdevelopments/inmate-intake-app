@@ -9,12 +9,12 @@ export class InmatesService {
 
   constructor(private http: HttpClient) { }
 
-  addInmate(InmateName, InmateDateOfBirth, InmateIntakeDateTime, InmateCellNumber, InmateLocation) {  
+  addInmate(InmateName, InmateDateOfBirth, InmateCellNumber, InmateIntakeDateTime, InmateLocation) {  
     const obj = {  
       InmateName,  
-      InmateDateOfBirth, 
+      InmateDateOfBirth,
+      InmateCellNumber, 
       InmateIntakeDateTime, 
-      InmateCellNumber,
       InmateLocation 
     };  
     console.log(obj);  
@@ -29,12 +29,12 @@ export class InmatesService {
     return this.http.get(`${this.uri}/edit/${id}`);  
   } 
   
-  updateInmates(InmateName, InmateDateOfBirth, InmateIntakeDateTime, InmateCellNumber, InmateLocation, id) {  
+  updateInmates(InmateName, InmateDateOfBirth, InmateCellNumber, InmateIntakeDateTime, InmateLocation, id) {  
     const obj = {  
       InmateName,  
-      InmateDateOfBirth,
-      InmateIntakeDateTime,  
+      InmateDateOfBirth,  
       InmateCellNumber,
+      InmateIntakeDateTime,
       InmateLocation  
     };  
     this.http.post(`${this.uri}/update/${id}`, obj).subscribe(res => console.log('Done'));  

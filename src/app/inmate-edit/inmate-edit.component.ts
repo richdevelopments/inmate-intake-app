@@ -18,9 +18,9 @@ export class InmateEditComponent implements OnInit {
 createForm() {  
   this.angForm = this.fb.group({  
     InmateName: ['', Validators.required ],  
-    InmateDateOfBirth: ['', Validators.required ],  
-    InmateIntakeDateTime: ['', Validators.required ],  
+    InmateDateOfBirth: ['', Validators.required ],
     InmateCellNumber: ['', Validators.required ],  
+    InmateIntakeDateTime: ['', Validators.required ],  
     InmateLocation: ['', Validators.required ]  
   });  
 }  
@@ -32,9 +32,9 @@ createForm() {
     });  
   } 
   
-  updateInmates(InmateName, InmateDateOfBirth, InmateIntakeDateTime, InmateCellNumber, InmateLocation, id) {  
+  updateInmates(InmateName, InmateDateOfBirth, InmateCellNumber, InmateIntakeDateTime, InmateLocation, id) {  
     this.route.params.subscribe(params => {  
-      this.is.updateInmates(InmateName, InmateDateOfBirth, InmateIntakeDateTime, InmateCellNumber, InmateLocation, params.id);  
+      this.is.updateInmates(InmateName, InmateDateOfBirth, InmateCellNumber, InmateIntakeDateTime, InmateLocation, params.id);  
       this.router.navigate(['inmates']);  
     });  
   }  

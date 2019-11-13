@@ -22,18 +22,7 @@
           <div *ngIf="angForm.controls['InmateDateOfBirth'].errors.required">  
             Inmate Date Of Birth is required.  
           </div>  
-        </div>  
-        <div class="form-group">  
-          <label class="col-md-4">Inmate Intake Date\Time </label>  
-          <input type="text" class="form-control" 
-          formControlName="InmateIntakeDateTime"   
-          #InmateIntakeDateTime />  
-        </div>  
-        <div *ngIf="angForm.controls['InmateIntakeDateTime'].invalid && (angForm.controls['InmateIntakeDateTime'].dirty || angForm.controls['InmateIntakeDateTime'].touched)" class="alert alert-danger">  
-          <div *ngIf="angForm.controls['InmateIntakeDateTime'].errors.required">  
-            Inmate Intake Date\Time is required.  
-          </div>  
-        </div>  
+        </div>
         <div class="form-group">  
           <label class="col-md-4">Inmate Cell No.</label>  
           <input type="text" class="form-control"   
@@ -44,6 +33,17 @@
         <div *ngIf="angForm.controls['InmateCellNumber'].invalid && (angForm.controls['InmateCellNumber'].dirty || angForm.controls['InmateCellNumber'].touched)" class="alert alert-danger">  
             <div *ngIf="angForm.controls['InmateCellNumber'].errors.required">  
             Inmate Cell Number is required.  
+          </div>  
+        </div>   
+        <div class="form-group">  
+          <label class="col-md-4">Inmate Intake Date & Time </label>  
+          <input type="text" class="form-control" 
+          formControlName="InmateIntakeDateTime"   
+          #InmateIntakeDateTime />  
+        </div>  
+        <div *ngIf="angForm.controls['InmateIntakeDateTime'].invalid && (angForm.controls['InmateIntakeDateTime'].dirty || angForm.controls['InmateIntakeDateTime'].touched)" class="alert alert-danger">  
+          <div *ngIf="angForm.controls['InmateIntakeDateTime'].errors.required">  
+            Inmate Intake Date\Time is required.  
           </div>  
         </div>  
         <div class="form-group">  
@@ -59,7 +59,7 @@
           </div>  
         </div>  
         <div class="form-group">  
-            <button (click) = "addInmate(InmateName.value, InmateDateOfBirth.value, InmateIntakeDateTime, InmateCellNumber.value, InmateLocation.value)" type="submit" class="btn btn-primary"  
+            <button (click) = "addInmate(InmateName.value, InmateDateOfBirth.value, InmateCellNumber.value, InmateIntakeDateTime.value, InmateLocation.value)" type="submit" class="btn btn-primary"  
             [disabled]="angForm.pristine || angForm.invalid" >  
               Create Inmate  
             </button>  

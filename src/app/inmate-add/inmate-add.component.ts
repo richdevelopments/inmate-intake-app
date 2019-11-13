@@ -17,14 +17,14 @@ export class InmateAddComponent implements OnInit {
    createForm() {  
     this.angForm = this.fb.group({  
       InmateName: ['', Validators.required ],  
-      InmateDateOfBirth: ['', Validators.required ],  
-      InmateIntakeDateTime: ['', Validators.required ],  
+      InmateDateOfBirth: ['', Validators.required ],
       InmateCellNumber: ['', Validators.required ],  
+      InmateIntakeDateTime: ['', Validators.required ],  
       InmateLocation: ['', Validators.required ]  
     });  
   }
-  addInmate(InmateName, InmateDateOfBirth, InmateIntakeDateTime, InmateCellNumber, InmateLocation) {  
-    this.is.addInmate(InmateName, InmateDateOfBirth, InmateIntakeDateTime, InmateCellNumber, InmateLocation);  
+  addInmate(InmateName, InmateDateOfBirth, InmateCellNumber, InmateIntakeDateTime,  InmateLocation) {  
+    this.is.addInmate(InmateName, InmateDateOfBirth, InmateCellNumber, InmateIntakeDateTime, InmateLocation);  
   }   
 
   ngOnInit() {
