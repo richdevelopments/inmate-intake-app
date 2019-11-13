@@ -18,4 +18,10 @@ export class InmateGetComponent implements OnInit {
     });  
   }
 
+  deleteInmate(id) {  
+    this.is.deleteInmate(id).subscribe(res => {  
+      this.inmates.splice(id, 1);  
+    });  
+}  
+
 }

@@ -4,6 +4,7 @@
         <td>Inmate Name</td>  
         <td>Inmate Date Of Birth</td>  
         <td>Inmate Cell Number</td>  
+        <td>Inmate Intake Date & Time</td>  
         <td>Inmate Location</td>  
         <td colspan="2">Actions</td>  
     </tr>  
@@ -12,10 +13,11 @@
         <tr *ngFor="let inmate of inmates">  
             <td>{{ inmate.InmateName }}</td>  
             <td>{{ inmate.InmateDateOfBirth }}</td>  
+            <td>{{ inmate.InmateIntakeDateTime }}</td>  
             <td>{{ inmate.InmateCellNumber }}</td>  
             <td>{{ inmate.InmateLocation }}</td>  
             <td><a [routerLink]="['/edit', inmate._id]" class="btn btn-primary">Edit</a></td>  
-            <td><a [routerLink]="" class="btn btn-danger">Delete</a></td>  
+            <td><a (click) = "deleteInmate(inmate._id)" class="btn btn-danger">Delete</a>  
         </tr>  
     </tbody>  
   </table>  
