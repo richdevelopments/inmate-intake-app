@@ -17,7 +17,7 @@ export class InmatesService {
       InmateIntakeDateTime, 
       InmateLocation 
     };  
-    console.log(obj);  
+    console.log(obj);  // check the data in the console
     this.http.post(`${this.uri}/add`, obj).subscribe(res => console.log('Done'));  
   }  
 
