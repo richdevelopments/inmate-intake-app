@@ -1,5 +1,6 @@
-<table class="table table-hover">  
-    <thead>  
+
+<table class="table table-hover table-striped table-bordered">  
+    <thead class="thead-dark">  
     <tr>  
         <td>Inmate Name</td>  
         <td>Inmate Date Of Birth</td>  
@@ -18,6 +19,6 @@
             <td>{{ inmate.InmateLocation }}</td>  
             <td><a [routerLink]="['/edit', inmate._id]" class="btn btn-primary">Edit</a></td>  
             <td><a (click) = "deleteInmate(inmate._id)" class="btn btn-danger">Delete</a>  
-        </tr>  
+        </tr> 
     </tbody>  
   </table>  
