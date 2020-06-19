@@ -1,6 +1,8 @@
 # InmateIntakeApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+It was built using Angular 8, MongoDB and Node/Express API.
+The application is designed to track prison inmates, having the functionality to add new inmates, edit inmate details such as where they are and at what time, and also to delete inmates.
 
 ## Development server
 
